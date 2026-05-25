@@ -11,6 +11,10 @@ export function useSmoothScroll(enabled = true) {
   useEffect(() => {
     if (!enabled) {
       document.documentElement.classList.remove("lenis");
+      document.documentElement.style.overflow = "";
+      document.documentElement.style.overflowY = "auto";
+      document.body.style.overflow = "";
+      document.body.style.overflowY = "auto";
       return;
     }
 
